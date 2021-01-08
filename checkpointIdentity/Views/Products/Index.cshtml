@@ -15,7 +15,7 @@
 <section class="container-fluid d-flex flex-wrap">
     @{ foreach (var item in Model)
         {
-            <div class="card" style="width: 18rem;">
+            <div class="card m-3 " style="width: 18rem; height:max-content">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"> @Html.DisplayNameFor(model => model.AdTitle):  @Html.DisplayFor(modelItem => item.AdTitle)  </h5>

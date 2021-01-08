@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
+@if (User.Identity.Name == Model.UsersId)
+{
+    
 <h1>Edit</h1>
 
 <h4>Product</h4>
@@ -33,6 +35,11 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+}
+else
+{
+    <h1>You can't edit this article you are not @Model.UsersId</h1>
+}
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
